@@ -358,6 +358,15 @@ class ViT5MSDeformAttnTransformerEncoderOnly(nn.Module):
         # Forward through ViT5 encoder layers
         # ------------------------------------------------------------------
         output = src_flatten
+
+
+        print(f"[DEBUG] src_flatten shape: {src_flatten.shape}")
+        print(f"[DEBUG] spatial_shapes: {spatial_shapes}")
+        print(f"[DEBUG] level_start_index: {level_start_index}")
+        print(f"[DEBUG] num_value from src: {src_flatten.shape[1]}")
+        print(f"[DEBUG] expected from spatial_shapes: {spatial_shapes.prod(1).sum()}")
+        print(f"[DEBUG] len(srcs): {len(srcs)}")
+
         for layer in self.layers:
             output = layer(
                 query=output,
