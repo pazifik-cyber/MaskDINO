@@ -35,7 +35,7 @@ from mmdet.structures.bbox import bbox_xyxy_to_cxcywh
 from .vit5_transformer_utils import RMSNorm, SwiGLU, LayerScale
 
 # Re-export helpers that MaskDINODecoder needs (unchanged from original)
-from .maskdino_decoder_layers import (
+from .maskdino_decoder_layers import ( 
     setup_seed,
     masks_to_boxes,
     MaskDINODecoder,          # base class – we subclass, not rewrite
