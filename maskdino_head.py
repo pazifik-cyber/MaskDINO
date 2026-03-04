@@ -10,8 +10,10 @@ from mmdet.registry import MODELS
 from mmdet.structures.bbox import bbox_xyxy_to_cxcywh
 from mmdet.utils import OptConfigType
 from .loss import SetCriterion
-from .maskdino_decoder_layers import MaskDINODecoder
-from .maskdino_encoder_layers import MaskDINOEncoder
+# from .maskdino_decoder_layers import MaskDINODecoder
+# from .maskdino_encoder_layers import MaskDINOEncoder
+from .maskdino_encoder_layers_v2 import ViT5MaskDINOEncoder as MaskDINOEncoder
+from .maskdino_decoder_layers_v2 import ViT5MaskDINODecoder as MaskDINODecoder
 
 
 def get_bounding_boxes(mask):
